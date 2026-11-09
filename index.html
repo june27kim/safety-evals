@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Курс посвящен оценке LLM и агентных систем. Формирует системное понимание принципов, инструментов и практик оценки нейросетей. А также учит разрабатывать для них надёжные и содержательные метрики." name="description"/>
+<meta content="#222" name="theme-color"/>
+
+<link as="style" href="assets/css/style.css" rel="preload"/>
+
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="assets/favicon.ico" rel="icon"/>
+<link href="assets/logo/icon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="assets/logo/icon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/logo/icon-96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="assets/logo/icon-180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="assets/logo/icon.svg" rel="icon" type="image/svg+xml"/>
+
+
+
+
+
+
+
+
+
+<title>AI Safety курс по оценке LLM: подходы, бенчмарки и методология | Моноид</title>
+<meta content="website" property="og:type"/>
+<meta content="AI Safety курс по оценке LLM: подходы, бенчмарки и методология" property="og:title"/>
+<meta content="Моноид" property="og:site_name"/>
+<meta content="ru" property="og:locale"/>
+<meta content="https://monoid.ru/events/course-safety-evals-2026" property="og:url"/>
+<link href="https://monoid.ru/events/course-safety-evals-2026" rel="canonical"/>
+<link href="assets/site.css" rel="stylesheet"/></head>
+<body tabindex="-1">
+<!--ШАПКА — можно удалить весь header--><header class="layouts/event.njk" tabindex="-1">
+<div>
+<a href="index.html">Моноид</a>
+<nav>
+<div class="hamburger" tabindex="0">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="options" tabindex="-1">
+<a href="index.html">Курсы</a>
+<a href="https://monoid.ru/events">Мероприятия</a>
+<a href="https://monoid.ru/donate">Донат</a>
+<a href="https://monoid.ru/legal">Документы</a>
+<a href="verify.html">Проверить сертификат</a></div>
+</nav>
+</div>
+</header>
+<main class="layouts/event.njk" data-slug="course-safety-evals-2026" tabindex="-1">
+<article class="event-single slug-course-safety-evals-2026">
+<header>
+<div class="event-hero-image">
+<img alt="AI Safety курс по оценке LLM: подходы, бенчмарки и методология" src="assets/images/events/course-safety-evals.svg"/>
+</div>
+<div>
+<h1>AI Safety курс по оценке LLM: подходы, бенчмарки и методология</h1>
+<div class="event-intro">
+<div class="event-meta">
+<div class="meta-item">
+<i class="fas fa-calendar"></i>
+<span>
+14 марта — 21 июня 2026 г.
+</span>
+</div>
+<div class="meta-item">
+<i class="fas fa-map-marker-alt"></i>
+<span>В ЦДО Моноид или онлайн</span>
+</div>
+</div>
+<p class="event-summary">Курс посвящен оценке LLM и агентных систем. Формирует системное понимание принципов, инструментов и практик оценки нейросетей. А также учит разрабатывать для них надёжные и содержательные метрики.</p>
+</div>
+<div class="event-share-links">
+</div>
+</div>
+</header>
+<div class="event-forms">
+<!--МЕНТОРЫ — карточки и модальные окна--><section class="event-carousel">
+<h2 class="carousel-title">Менторы проектов</h2>
+<div class="carousel-caption">
+Список менторов пополняется
+</div>
+<div class="carousel-wrapper">
+<button aria-label="Назад" class="carousel-nav prev js-carousel-prev" type="button">
+❮
+</button>
+<div class="carousel-track-container">
+<div class="carousel-track">
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Андрей Матвеякин" loading="lazy" src="assets/images/mentors/andrey-matveiakin.png"/>
+</div>
+<div class="card-content">
+<h4>Андрей Матвеякин</h4>
+<p class="card-subtitle">Программист в Apollo Research, ex-Google</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-andrey-matveiakin" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Елена Еричева" loading="lazy" src="assets/images/mentors/elena-ericheva.png"/>
+</div>
+<div class="card-content">
+<h4>Елена Еричева</h4>
+<p class="card-subtitle">Ex-METR, исследовательница evals и mech interp мультимодальных/LLM-систем</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-elena-ericheva" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Андрей Серяков" loading="lazy" src="assets/images/mentors/andrey-seryakov.png"/>
+</div>
+<div class="card-content">
+<h4>Андрей Серяков</h4>
+<p class="card-subtitle">Independent researcher, ex-CERN, популяризатор науки</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-andrey-seryakov" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Игорь Иванов" loading="lazy" src="assets/images/mentors/igor-ivanov.png"/>
+</div>
+<div class="card-content">
+<h4>Игорь Иванов</h4>
+<p class="card-subtitle">Visiting Researcher в Meridian Cambridge</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-igor-ivanov" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Анна Шабанова" loading="lazy" src="assets/images/mentors/anna-shabanova.png"/>
+</div>
+<div class="card-content">
+<h4>Анна Шабанова</h4>
+<p class="card-subtitle">Исследователь и менеджер Лаборатории ИИ СКОЛКОВО</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-anna-shabanova" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Борис Цейтлин" loading="lazy" src="assets/images/mentors/boris-tseitlin.png"/>
+</div>
+<div class="card-content">
+<h4>Борис Цейтлин</h4>
+<p class="card-subtitle">Автор ТГ канала 'Борис опять', Ex-eBay, ex-Yandex, преподавал машинное обучение в ВШЭ, ОТУС и Deep Learning School</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-boris-tseitlin" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Семен Стешин" loading="lazy" src="assets/images/mentors/simon-steshin.png"/>
+</div>
+<div class="card-content">
+<h4>Семен Стешин</h4>
+<p class="card-subtitle">ML исследователь. Работаю в https://sage-future.org/ вместе с авторами AI-2027, чтобы помочь им подумать про ближайшее будущее. Больше тут: https://stesh.in/</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-simon-steshin" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Алексей Донцов" loading="lazy" src="assets/images/mentors/alexey-dontsov.jpeg"/>
+</div>
+<div class="card-content">
+<h4>Алексей Донцов</h4>
+<p class="card-subtitle">Исследователь в AIRI, занимаюсь интерпретируемостью LLM: пишу статьи и читаю лекции</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-alexey-dontsov" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Александра Рыбакова" loading="lazy" src="assets/images/mentors/alexandra-rybakova.png"/>
+</div>
+<div class="card-content">
+<h4>Александра Рыбакова</h4>
+<p class="card-subtitle">Аналитик-разработчик в Яндексе, автор учебных курсов по теории ИИ и AI Safety, магистр ВМК МГУ</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-alexandra-rybakova" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Denis Moiseenko" loading="lazy" src="assets/images/mentors/denis-moiseenko.png"/>
+</div>
+<div class="card-content">
+<h4>Denis Moiseenko</h4>
+<p class="card-subtitle">ML-инженер, исследователь, Preference Model, ex-SPAR, ex-Algoverse</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-denis-moiseenko" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Олег Лариков" loading="lazy" src="assets/images/mentors/oleg-larikov.png"/>
+</div>
+<div class="card-content">
+<h4>Олег Лариков</h4>
+<p class="card-subtitle">Преподаватель ЦДО Моноид, программист, исследователь безопасности ИИ, популяризатор науки и рационального мышления</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-oleg-larikov" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Алексей Горбачев" loading="lazy" src="assets/images/mentors/alexey-gorbachev.png"/>
+</div>
+<div class="card-content">
+<h4>Алексей Горбачев</h4>
+<p class="card-subtitle">Магистрант ВМК МГУ. Старший аналитик в Т-банке. Разработчик материалов для курсов по AI Safety</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-alexey-gorbachev" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Слава Меритон" loading="lazy" src="assets/images/mentors/slava-meriton.png"/>
+</div>
+<div class="card-content">
+<h4>Слава Меритон</h4>
+<p class="card-subtitle">Преподаватель ЦДО Моноид, аспирант, автор курсов по AI Safety, соавтор канала Start in AI Safety</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-slava-meriton" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Антон Чайников" loading="lazy" src="assets/images/mentors/anton-chaynikov.png"/>
+</div>
+<div class="card-content">
+<h4>Антон Чайников</h4>
+<p class="card-subtitle">Преподаватель ЦДО Моноид, ex-Kaspersky, автор курсов по теории ИИ и AI Safety, магистр НИУ ВШЭ</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-anton-chaynikov" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Сабрина Садиех" loading="lazy" src="assets/images/mentors/sabrina-sadiekh.png"/>
+</div>
+<div class="card-content">
+<h4>Сабрина Садиех</h4>
+<p class="card-subtitle">XAI/Ai security Researcher, магистрант НИУ ВШЭ, преподаватель и автор курсов по explainable AI</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-sabrina-sadiekh" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Артем Карпов" loading="lazy" src="assets/images/mentors/artem-karpov.png"/>
+</div>
+<div class="card-content">
+<h4>Артем Карпов</h4>
+<p class="card-subtitle">Independent researcher, scheming (deceptive) behavior of LLM agents</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-artem-karpov" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Эдуард Капелко" loading="lazy" src="assets/images/mentors/eduard-kapelko.png"/>
+</div>
+<div class="card-content">
+<h4>Эдуард Капелко</h4>
+<p class="card-subtitle">ML инженер, Quant researcher, ныне аспирант по математике НАН РБ. Разработчик материалов для курсов по AI Safety, пишу статьи.</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-eduard-kapelko" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Джамиля Эркенова" loading="lazy" src="assets/images/mentors/jamilya-erkenova.png"/>
+</div>
+<div class="card-content">
+<h4>Джамиля Эркенова</h4>
+<p class="card-subtitle">Дата аналитик-инженер в Сбере, занимаюсь рисерчем в AI Safety</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-jamilya-erkenova" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Сергей Кудряшов" loading="lazy" src="assets/images/mentors/sergey-kudryashov.png"/>
+</div>
+<div class="card-content">
+<h4>Сергей Кудряшов</h4>
+<p class="card-subtitle">Рисерчер, аспирант ВШЭ</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-sergey-kudryashov" type="button">
+Подробнее о менторе
+</button>
+</div>
+<div class="carousel-card">
+<div class="card-body">
+<div class="card-image">
+<img alt="Михаил Селезнёв" loading="lazy" src="assets/images/mentors/mikhail-seleznev.png"/>
+</div>
+<div class="card-content">
+<h4>Михаил Селезнёв</h4>
+<p class="card-subtitle">Научный сотрудник AIRI, аспирант Сколтеха, MATS 5.0, CHAI 2024 Intern, преподаватель ЦДО Моноид</p>
+</div>
+</div>
+<button class="card-link js-open-modal" data-modal-target="modal-mikhail-seleznev" type="button">
+Подробнее о менторе
+</button>
+</div>
+</div>
+</div>
+<button aria-label="Вперед" class="carousel-nav next js-carousel-next" type="button">
+❯
+</button>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-andrey-matveiakin">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Андрей Матвеякин" class="modal-avatar" src="assets/images/mentors/andrey-matveiakin.png"/>
+<div>
+<h3>Андрей Матвеякин</h3>
+<p class="modal-subtitle">Программист в Apollo Research, ex-Google</p>
+</div>
+</div>
+<div class="modal-body">
+<p>Создаю инфраструктуру для людей, создающих LLM evals.<br/>
+<br/>
+Мне интересна софтварная сторона model evaluations.
+<strong>Возможные проекты:</strong></p>
+<ul>
+<li>Что-то улучшить в Inspect AI</li>
+<li>Создать новый продукт в экосистеме Inspect AI, который поможет писать эвалы, запускать их, анализировать результаты и прочее</li>
+<li>То же самое для любого другого evals framework</li>
+<li>С нуля сделать свой evals framework для ситуаций, когда существующие не справляются</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-elena-ericheva">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Елена Еричева" class="modal-avatar" src="assets/images/mentors/elena-ericheva.png"/>
+<div>
+<h3>Елена Еричева</h3>
+<p class="modal-subtitle">Ex-METR, исследовательница evals и mech interp мультимодальных/LLM-систем</p>
+</div>
+</div>
+<div class="modal-body">
+<p><strong>Область интересов:</strong>
+Дизайн и формализация задач для evaluation, интерпретируемость и систематичность оценок, методология построения бенчмарков, анализ валидности и устойчивости оценочных процедур.<br/>
+<br/>
+<strong>Проект:</strong>
+Мне интересны проекты, связанные с формализацией и обоснованием выбранных задач и метрик для оценки моделей. В частности:</p>
+<ul>
+<li>что именно мы хотим проверять и почему;</li>
+<li>как формализовать проверяемое свойство;</li>
+<li>чем и как его измерять;</li>
+<li>почему выбранная методология считается валидной.</li>
+</ul>
+<p>Отдельный фокус — снижение false negative и false positive в оценках, а также повышение робастности бенчмарков и их итоговых результатов.</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-andrey-seryakov">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Андрей Серяков" class="modal-avatar" src="assets/images/mentors/andrey-seryakov.png"/>
+<div>
+<h3>Андрей Серяков</h3>
+<p class="modal-subtitle">Independent researcher, ex-CERN, популяризатор науки</p>
+</div>
+</div>
+<div class="modal-body">
+<p>Ex-физик частиц, десять лет занимался экспериментальной физикой в ЦЕРН. Популяризатор науки, читаю лекции, вел блог ЦЕРНач, сейчас каналы <a href="https://t.me/sexcolliderrock">@sexcolliderrock</a> и <a href="https://t.me/ai_research_notes">@ai_research_notes</a>, много что еще.<br/>
+<br/>
+Мне нравится изучать и узнавать о том, как вокруг все работает - от космоса до политических систем. C начала весны 2024 погрузился в ИИ. Очень хорошо умею в research, посредственно в software и совсем никак в hardware.</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-igor-ivanov">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Игорь Иванов" class="modal-avatar" src="assets/images/mentors/igor-ivanov.png"/>
+<div>
+<h3>Игорь Иванов</h3>
+<p class="modal-subtitle">Visiting Researcher в Meridian Cambridge</p>
+</div>
+</div>
+<div class="modal-body">
+<p>Scheming evaluations, evaluation awareness</p>
+<p><strong>Проекты:</strong></p>
+<ul>
+<li>Создать прототип реалистичного бенчмарка, тестирующего, может ли ЛЛМ саботировать AI safety исследования или control measures</li>
+<li>Создать тул, который позволяет тестировать, распознает ли ЛЛМ конкретные бенчмарки, что важно для понимания, какие бенчмарки попали в обучающую выборку этой ЛЛМ. Можно будет выпустить хайповый пост на LW или, даже, серьезное исследование, в зависимости от энтузиазма и работоспособности участников</li>
+<li>Любой проект из этого моего <a href="https://www.lesswrong.com/posts/tn8nKcNE4SDnDxLJj/call-for-science-of-eval-awareness-research-directions">поста</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-anna-shabanova">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Анна Шабанова" class="modal-avatar" src="assets/images/mentors/anna-shabanova.png"/>
+<div>
+<h3>Анна Шабанова</h3>
+<p class="modal-subtitle">Исследователь и менеджер Лаборатории ИИ СКОЛКОВО</p>
+</div>
+</div>
+<div class="modal-body">
+<p><strong>Область интересов:</strong> alignment, физический AI, робототехника, практические исследования в AI Safety</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-boris-tseitlin">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Борис Цейтлин" class="modal-avatar" src="assets/images/mentors/boris-tseitlin.png"/>
+<div>
+<h3>Борис Цейтлин</h3>
+<p class="modal-subtitle">Автор ТГ канала 'Борис опять', Ex-eBay, ex-Yandex, преподавал машинное обучение в ВШЭ, ОТУС и Deep Learning School</p>
+</div>
+</div>
+<div class="modal-body">
+<p>Я автор одного из популярных авторских каналов про машинное обучение: <a href="https://t.me/boris_again">@boris_again</a>. Сейчас я пишу научпоп книгу про ИИ и машинное обучение. Провожу мок интервью и даю консультации по трудоутсройству в области CS и ML.</p>
+<ul>
+<li>Я бывший Staff Machine Learning Engineer в eBay. В том числе работал там над in-house LLM моделями</li>
+<li>До этого строил компьютерное зрение с нуля в PlanetFarms, был исследователем Yandex (Toloka) и инженером в YC стартапе Mindsdb.</li>
+<li>Преподавал машинное обучение в <a href="https://t.me/c/2736781221/36/1434">ВШЭ</a>, <a href="https://t.me/c/2736781221/36/1434">ОТУС</a> и Deep Learning School. Иногда делаю обучающие материалы просто так: <a href="https://t.me/c/2736781221/36/1434">для чайников</a>, <a href="https://t.me/c/2736781221/36/1434">интересующихся</a> и <a href="https://t.me/c/2736781221/36/1434">не только</a>. Периодически пишу про стартапы, например <a href="https://t.me/c/2736781221/36/1434">про опционы</a>.</li>
+<li>Как эксперт от университета Иннополис консультировал Росстат, Роспатент и ВТБ.</li>
+<li>Самостоятельно консультировал Сбер (Звук), Яков и Партнеры Digital, делал аудит для <a href="https://t.me/c/2736781221/36/1434">lava.top</a>.</li>
+<li>Написал научную статью о прогрогнозировании COVID-19 и даже <a href="https://t.me/c/2736781221/36/1434">немного попал в новости</a>.</li>
+<li>Имею довольно хороший нетворк в AI/ML. Например, лично знаю людей работающих над META LLama и Google Gemini, делающих стартапы в AI.</li>
+</ul>
+<p>В целом я всегда где-то на стыке между инженерией, исследованиями и бизнесом.</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-simon-steshin">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Семен Стешин" class="modal-avatar" src="assets/images/mentors/simon-steshin.png"/>
+<div>
+<h3>Семен Стешин</h3>
+<p class="modal-subtitle">ML исследователь. Работаю в https://sage-future.org/ вместе с авторами AI-2027, чтобы помочь им подумать про ближайшее будущее. Больше тут: https://stesh.in/</p>
+</div>
+</div>
+<div class="modal-body">
+<p>Меня интересует предпринимательство сейчас и методологические вопросы всегда. Я работаю вместе с Sage / AI-Futures Project, поэтому если вы очень самостоятельный, не боитесь трудностей и вам понравился проект из списка за авторством Eli L или Daniel Kokotajlo — я могу помочь.</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-alexey-dontsov">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Алексей Донцов" class="modal-avatar" src="assets/images/mentors/alexey-dontsov.jpeg"/>
+<div>
+<h3>Алексей Донцов</h3>
+<p class="modal-subtitle">Исследователь в AIRI, занимаюсь интерпретируемостью LLM: пишу статьи и читаю лекции</p>
+</div>
+</div>
+<div class="modal-body">
+<p><strong>Область интересов:</strong><br/>
+Mechanistic interpretability, Sparse AutoEncoders, LLM alignment (в узком и широком смыслах), области на стыке.<br/>
+<br/>
+<strong>Проект:</strong><br/>
+Интересно подумать над тем, как использовать техники интерпретируемости для лучших евалсов, в частности хорошо бы получилось использовать пробы, так как они надежны, их легко учить и понимать.</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-alexandra-rybakova">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Александра Рыбакова" class="modal-avatar" src="assets/images/mentors/alexandra-rybakova.png"/>
+<div>
+<h3>Александра Рыбакова</h3>
+<p class="modal-subtitle">Аналитик-разработчик в Яндексе, автор учебных курсов по теории ИИ и AI Safety, магистр ВМК МГУ</p>
+</div>
+</div>
+<div class="modal-body">
+<p><strong>Область интересов:</strong><br/>
+<strong>tldr;</strong> Evals, концептуальные исследования в AI Safety, прикольные пет-проекты.<br/>
+<strong>Подробнее про возможные проекты:</strong> мне интересны проекты, связанные, например, с анализом дизайнов оценок моделей и их усточивостью.</p>
+<ul>
+<li>Можно приходить с проектами по исследованию ландшафта направлений в safety (например, построению динамической карты изменений за последние н лет или исследованию плотности людей по направлениям).</li>
+<li>А также с пет-проектами, направленными на улучшению личных интуиций в проблеме сейфити через попытки реализации прикольных эффектов (почитайте статью про сов, если еще нет).</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-denis-moiseenko">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Denis Moiseenko" class="modal-avatar" src="assets/images/mentors/denis-moiseenko.png"/>
+<div>
+<h3>Denis Moiseenko</h3>
+<p class="modal-subtitle">ML-инженер, исследователь, Preference Model, ex-SPAR, ex-Algoverse</p>
+</div>
+</div>
+<div class="modal-body">
+<p>Бакалавриат МГУ, магистратура Сколково (биоинформатика).<br/>
+<strong>Область интересов:</strong> reasoning, geometric and topological approaches to mechinterp, RL post-training, KGs</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-oleg-larikov">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Олег Лариков" class="modal-avatar" src="assets/images/mentors/oleg-larikov.png"/>
+<div>
+<h3>Олег Лариков</h3>
+<p class="modal-subtitle">Преподаватель ЦДО Моноид, программист, исследователь безопасности ИИ, популяризатор науки и рационального мышления</p>
+</div>
+</div>
+<div class="modal-body">
+<p>Программист на C, C++, Phyton. В свободное время рассказываю про математику, байесовские методы, agent foundation. Полагаю, что у нас, сегодня нет проблемы "согласования ИИ", хорошо отделённой от проблемы "понимания, что вообще интеллект такое". Следовательно абстрактное беспокойство "безопасны ли вот эти эксперименты" нельзя удовлетворительно разрешить, не имея достаточно хорошей модели области вообще.</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-alexey-gorbachev">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Алексей Горбачев" class="modal-avatar" src="assets/images/mentors/alexey-gorbachev.png"/>
+<div>
+<h3>Алексей Горбачев</h3>
+<p class="modal-subtitle">Магистрант ВМК МГУ. Старший аналитик в Т-банке. Разработчик материалов для курсов по AI Safety</p>
+</div>
+</div>
+<div class="modal-body">
+<p>В рамках проекта предлагаю доработать обучающие ноутбуки по inspect_ai для добавления в гит AISI</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-slava-meriton">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Слава Меритон" class="modal-avatar" src="assets/images/mentors/slava-meriton.png"/>
+<div>
+<h3>Слава Меритон</h3>
+<p class="modal-subtitle">Преподаватель ЦДО Моноид, аспирант, автор курсов по AI Safety, соавтор канала Start in AI Safety</p>
+</div>
+</div>
+<div class="modal-body">
+<p><strong>Область интересов:</strong> концептуальные исследования в AI Safety, методология оценки LLM, дизайн оценок, дизайн экспериментов.</p>
+<p><strong>Проект:</strong> мне интересны проекты, которые анализируют промптозависмость бенчмарков.</p>
+<ul>
+<li>Это может быть техническое исследование с хорошим дизайном эксперимента.</li>
+<li>Или анализ существующих экспериментов на предмет совпадения/различия их подлежащих моделей.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-anton-chaynikov">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Антон Чайников" class="modal-avatar" src="assets/images/mentors/anton-chaynikov.png"/>
+<div>
+<h3>Антон Чайников</h3>
+<p class="modal-subtitle">Преподаватель ЦДО Моноид, ex-Kaspersky, автор курсов по теории ИИ и AI Safety, магистр НИУ ВШЭ</p>
+</div>
+</div>
+<div class="modal-body">
+<p>Области интересов: алгоритмическая теория мышления с фокусом в эмпирику и математику; модели мира, онтологии, их опознание и согласование</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-sabrina-sadiekh">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Сабрина Садиех" class="modal-avatar" src="assets/images/mentors/sabrina-sadiekh.png"/>
+<div>
+<h3>Сабрина Садиех</h3>
+<p class="modal-subtitle">XAI/Ai security Researcher, магистрант НИУ ВШЭ, преподаватель и автор курсов по explainable AI</p>
+</div>
+</div>
+<div class="modal-body">
+<p><strong>Область интересов:</strong> исследования в области интерпретируемости моделей, стык интерпретируемости и safety/security, исследования внутренней геометрии моделей в downstream задачах.</p>
+<p><strong>Проект:</strong> мне интересны проекты, которые стремятся интерпретировать внутреннее пространство моделей.</p>
+<ul>
+<li>Исследование границ Platonic representaion/Linear гипотез в LLM.</li>
+<li>Исследование влияния атак (white/black box) на внутренние пространства модели</li>
+<li>Нахождение и устранение bias'es в моделях</li>
+<li>Разработка domain-specific стратегий защит LLM (гардрейлы, unlearning, операции с эмбеддингами, альтернативные походы)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-artem-karpov">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Артем Карпов" class="modal-avatar" src="assets/images/mentors/artem-karpov.png"/>
+<div>
+<h3>Артем Карпов</h3>
+<p class="modal-subtitle">Independent researcher, scheming (deceptive) behavior of LLM agents</p>
+</div>
+</div>
+<div class="modal-body">
+<p><a href="https://www.artkpv.net/">www.artkpv.net</a></p>
+<p><strong>Область интересов</strong>: Сейчас в основном evals, которые относятся к encoded reasoning, scheming (deceptive) behavior of LLM agents.</p>
+<p><strong>Возможный проект:</strong> We propose a series of experiments to assess large language models (LLMs) steganography risks and develop defenses. Our research question: How do LLM steganographic capabilities scale from individual model reasoning to multi-model coordination, and what detection and mitigation strategies prove effective? The experiments follow a logical progression:</p>
+<ol>
+<li>Establish individual model capabilities;</li>
+<li>Scale to multi-model communication, additionally evaluating hidden Schelling coordination;</li>
+<li>Develop detection methods;</li>
+<li>Implement mitigation strategies. Results will be published incrementally as smaller reports, followed by a research paper(s) compiling the accumulated evidence.<br/>
+\</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-eduard-kapelko">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Эдуард Капелко" class="modal-avatar" src="assets/images/mentors/eduard-kapelko.png"/>
+<div>
+<h3>Эдуард Капелко</h3>
+<p class="modal-subtitle">ML инженер, Quant researcher, ныне аспирант по математике НАН РБ. Разработчик материалов для курсов по AI Safety, пишу статьи.</p>
+</div>
+</div>
+<div class="modal-body">
+<p><strong>Область интересов:</strong> evals, mechinterp (математика и прикладная), agent foundations, unlearning, gradual disempowerment, cooperative AI.</p>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-jamilya-erkenova">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Джамиля Эркенова" class="modal-avatar" src="assets/images/mentors/jamilya-erkenova.png"/>
+<div>
+<h3>Джамиля Эркенова</h3>
+<p class="modal-subtitle">Дата аналитик-инженер в Сбере, занимаюсь рисерчем в AI Safety</p>
+</div>
+</div>
+<div class="modal-body">
+<p>Из релевантного интересны эвалсы и scalable oversight.
+<strong>Проекты:</strong></p>
+<ol>
+<li>Генерация Connections-like конфигов и оценка моделей на них</li>
+<li>Проверка честности моделей и утечек данных путем сравнения теоретических алгоритмических сложностей и наблюдаемого поведения модели на различных тасках</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-sergey-kudryashov">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Сергей Кудряшов" class="modal-avatar" src="assets/images/mentors/sergey-kudryashov.png"/>
+<div>
+<h3>Сергей Кудряшов</h3>
+<p class="modal-subtitle">Рисерчер, аспирант ВШЭ</p>
+</div>
+</div>
+<div class="modal-body">
+<p><strong>Области интересов:</strong></p>
+<ul>
+<li>Extreme value theory, adversarial elicitation, statistical guarantees on predicability of evals</li>
+<li>Lipschitz function approximation, distributionally robust optimization</li>
+<li>stochastic approximation, risk bounds, probabilistic regularization</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mentor-modal-overlay js-modal-overlay" id="modal-mikhail-seleznev">
+<div class="mentor-modal-content">
+<button aria-label="Закрыть" class="close-modal js-close-modal" type="button">×</button>
+<div class="modal-header">
+<img alt="Михаил Селезнёв" class="modal-avatar" src="assets/images/mentors/mikhail-seleznev.png"/>
+<div>
+<h3>Михаил Селезнёв</h3>
+<p class="modal-subtitle">Научный сотрудник AIRI, аспирант Сколтеха, MATS 5.0, CHAI 2024 Intern, преподаватель ЦДО Моноид</p>
+</div>
+</div>
+<div class="modal-body">
+<p><a href="https://scholar.google.com/citations?user=zHaNRJIAAAAJ&amp;hl=en">Google Scholar</a></p>
+<p><strong>Область интересов:</strong></p>
+<ul>
+<li><strong>Идейно:</strong> фундаментальные проблемы AI Safety (~<a href="https://www.lesswrong.com/posts/NJYmovr9ZZAyyTBwM/what-i-mean-by-alignment-is-in-large-part-about-making">making cognition aimable at all</a>, sharp left turn, <a href="https://www.lesswrong.com/w/diamond-maximizer">diamond problem</a>, <a href="https://intelligence.org/files/Corrigibility.pdf">shutdown problem</a>, <a href="https://www.lesswrong.com/posts/XWwvwytieLtEWaFJX/deep-deceptiveness">deep deceptiveness</a>) и систематизация моделей угроз.</li>
+<li><strong>Прагматически:</strong> генерализация, устойчивость, достоверность AI-систем.</li>
+</ul>
+<p><strong>Статьи:</strong></p>
+<ul>
+<li><a href="https://arxiv.org/abs/2510.11288">Emergent Misalignment via In-Context Learning: Narrow in-context examples can produce broadly misaligned LLMs</a>;</li>
+<li><a href="https://arxiv.org/abs/2412.09565">Obfuscated Activations Bypass LLM Latent-Space Defenses</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!--ОПИСАНИЕ И ПРОГРАММА--><div class="event-content">
+<h3>Участники научатся:</h3>
+<ul>
+<li>Анализировать существующие бенчмарки и метрики (MMLU, TruthfulQA, BIG-bench и др.);</li>
+<li>Применять современные инструменты (работа с <a href="https://inspect.aisi.org.uk/">Inspect AI</a>, знакомство с <a href="https://datanorth.ai/blog/evals-openais-framework-for-evaluating-llms">OpenAI Evals</a>, <a href="https://www.eleuther.ai/projects/large-language-model-evaluation">Im-eval-harness</a>, <a href="https://www.ragas.io/">Ragas</a>);</li>
+<li>Проектировать собственные оценки для LLM и агентов;</li>
+<li>Разрабатывать дизайн эксперимента и проводить исследования в области evals;</li>
+<li>Понимать ограничения различных подходов к evals.</li>
+</ul>
+<h3>По окончании курса:</h3>
+<ul>
+<li>Проект в портфолио;</li>
+<li>Сертификат о прохождении курса;</li>
+<li>Абонемент на 3 месяца коворкинга в ЦДО Моноид;</li>
+<li>Лучшим студентам предоставляется карьерная консультация и приглашение на онлайн-конференцию.</li>
+</ul>
+<h3>Содержание курса:</h3>
+<h4>Теоретическая часть:</h4>
+<ul>
+<li>Основные идеи и концепции в evals;</li>
+<li>Подходы и cтандарты;</li>
+<li>Инструменты, метрики и разработка бенчмарков;</li>
+<li>Оценка агентских систем;</li>
+<li>Ограничения, сравнение подходов и открытые вопросы области.</li>
+</ul>
+<h4>Практика:</h4>
+<ul>
+<li>Настройка среды и запуск базовой оценки;</li>
+<li>Реализация стандартного бенчмарка (частичный запуск MMLU);</li>
+<li>Проектирование и реализация кастомной оценки (на примере набора данных Jigsaw);</li>
+<li>Сборка и тестирование простого ReAct-агента;</li>
+<li>Работа в рамках специализированных треков для подготовки к проектной части.</li>
+</ul>
+<h4>Курс состоит из двух этапов: учебного и проектного.</h4>
+<ul>
+<li>Учебный (5 недель):
+<ul>
+<li>Изучаются теоретические основы evals и практика по построению оценок LLM и агентов, проходят еженедельные групповые встречи, семинары, консультации и коворкинги;</li>
+<li>Еженедельные задания:
+<ul>
+<li>Техническое: ноутбуки по темам курса — реализовать и проанализировать методы, разобранные на неделе;</li>
+<li>Концептуальное: короткая исследовательская заметка с обоснованием методологических решений и анализом их сильных и слабых сторон;</li>
+</ul>
+</li>
+<li>Нагрузка: 15 часов в неделю;</li>
+</ul>
+</li>
+<li>Проектный (5 недель):
+<ul>
+<li>Работа с ментором над индивидуальным или командным проектом (до 4 человек);</li>
+<li>Нагрузка: от 10 часов в неделю.</li>
+</ul>
+</li>
+</ul>
+<h3>Требования к участникам:</h3>
+<ul>
+<li>Навыки программирования на Python;</li>
+<li>Базовое понимание концепций AI Safety или готовность пройти 6-часовой экспрес-курс;</li>
+<li>Опыт в Evals приветствуется, но не является обязательным;</li>
+<li>Опыт в проведении исследований и дизайне экспериментов приветствуется, но не является обязательным.</li>
+</ul>
+<h3>Расписание курса:</h3>
+<h4>Регистрация, отбор и подготовка</h4>
+<ul>
+<li>23 января по 28 февраля - Приём заявок;</li>
+<li>1 марта - Дедлайн ответа на заявку;</li>
+<li>9, 14 марта — Вводная встреча (дата на выбор);</li>
+<li>10 марта - Публикация материалов к первым занятиям;</li>
+</ul>
+<h4>Образовательная часть</h4>
+<ul>
+<li>16 марта по 19 апреля - Учебный этап (5 недель);</li>
+<li>25, 26 апреля - Выпускной;</li>
+</ul>
+<h4>Проектная часть</h4>
+<p><em>По согласованию с ментором возможен перерыв на время сессии и продолжение в июле</em></p>
+<ul>
+<li>20 апреля по 4 мая - Подача заявок на проектный этап;</li>
+<li>10 мая - Дедлайн ответов на заявки;</li>
+<li>11 мая по 14 июня - Проектный этап (5 недель);</li>
+<li>20, 21 июня - Защита проектов;</li>
+<li>Авторы лучших проектов получат приглашение на участие в онлайн конференции в июле.</li>
+</ul>
+<h3>Дополнительная информация:</h3>
+<ul>
+<li>Курс бесплатный, но количество мест ограничено, поэтому заявки отбираются на конкурсной основе;</li>
+<li>Формат: либо оффлайн в Москве, либо онлайн.</li>
+</ul>
+</div>
+</article>
+</main>
+<!--НИЖНИЙ БЛОК — можно удалить весь footer--><footer>
+<ul>
+<li>
+<h2>Моноид</h2>
+<p>Центр дополнительного образования</p>
+<p><a class="footer-link-small" href="https://monoid.ru/legal">ИП Забелина Арина Андреевна</a>
+<a class="footer-link-small" href="https://t.me/MonoidAdmin" rel="noopener noreferrer" target="_blank">Связаться с нами по вопросам выдачи документов<br/>об окончании курса</a>
+<a class="btn-tg" href="https://t.me/monoid_center" rel="noopener noreferrer" target="_blank">Подписаться на анонсы в Telegram</a></p>
+</li>
+<li>
+<h3>Адрес</h3>
+<p><a href="https://yandex.ru/maps/org/monoid/3114090698/" rel="noopener noreferrer" target="_blank"><i class="fas fa-map-marker-alt"></i> г. Москва, Ломоносовский пр-т, 25к3</a>
+помещение 15</p>
+</li>
+<li>
+<h3>Контакты</h3>
+<p><a href="https://t.me/CenterMonoid" rel="noopener noreferrer" target="_blank"><i class="fas fa-telegram"></i> @CenterMonoid</a>
+<a href="mailto:contact@monoid.ru">contact@monoid.ru</a></p>
+</li>
+</ul>
+</footer>
+<script defer="True" src="assets/course.js"></script></body>
+</html>

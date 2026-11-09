@@ -1,0 +1,23 @@
+/* Дополнения к оригинальным стилям monoid.ru */
+.carousel-track-container{overflow-x:auto!important;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.carousel-track{transform:none!important}.carousel-card{scroll-snap-align:start}
+.mentor-modal-overlay.open{display:flex!important;opacity:1!important;visibility:visible!important}
+.options.mobile-open{display:flex!important;visibility:visible!important;opacity:1!important}
+:focus-visible{outline:3px solid #c55c37;outline-offset:4px}
+.cert-page{margin:0;background:#f5f5f3;color:#222;font-family:system-ui,sans-serif}
+.cert-nav{max-width:1120px;margin:auto;padding:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.cert-nav a{color:#222;text-decoration:none}.cert-nav .brand{font-weight:750;font-size:28px}
+.cert-main{max-width:1040px;margin:40px auto 80px;padding:0 24px}
+.eyebrow{font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:#666}
+.cert-sheet{background:white;border:1px solid #ddd;padding:clamp(24px,5vw,64px);position:relative;box-shadow:0 16px 60px #00000008;border-top:6px solid #222}
+.cert-sheet h1{font-size:clamp(25px,4vw,44px);line-height:1.2;margin:28px 0 16px;overflow-wrap:anywhere}
+.cert-sheet h2{font-size:clamp(21px,3vw,32px);line-height:1.3;margin:16px 0}
+.cert-sheet p{max-width:700px}.cert-details{display:flex;gap:32px;flex-wrap:wrap;margin:36px 0 0}.cert-details dt{font-size:13px;color:#666}.cert-details dd{margin:6px 0 0;overflow-wrap:anywhere}
+.sample{background:#fff2d4;border:1px solid #e4cc9a;padding:12px 18px;margin-bottom:20px;font-size:15px}
+.status{display:inline-block;border:1px solid #bed5bd;color:#325c32;background:#eff7ef;padding:6px 12px;font-size:14px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.actions a,.actions button,.verify-form button{background:#222;color:white;border:1px solid #222;padding:12px 18px;font:inherit;text-decoration:none;cursor:pointer;border-radius:3px}
+.actions .secondary{background:transparent;color:#222}.hint{font-size:14px;color:#666}.verify-form{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.verify-form input{padding:14px;border:1px solid #888;font:inherit;min-width:0;flex:1}.verify-result{padding:12px 0;overflow-wrap:anywhere}.cert-foot{margin-top:36px;font-size:14px;color:#666}code{overflow-wrap:anywhere}
+@media(max-width:600px){.cert-main{margin-top:20px}.cert-details{gap:20px}.actions>*{width:100%;text-align:center;box-sizing:border-box}.cert-nav{padding:20px 24px}.cert-sheet{padding:24px}}
+@media print{.cert-nav,.actions,.hint,.cert-foot{display:none}.cert-main{max-width:none;margin:0;padding:0}.cert-sheet{box-shadow:none;border:1px solid #aaa}body.cert-page{background:white}}
+.carousel-track{touch-action:auto}
+
+.status-example{background:#fff2d4;color:#705017;border-color:#e4cc9a}.actions button:disabled{cursor:default;opacity:.65}
